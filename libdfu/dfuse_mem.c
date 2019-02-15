@@ -93,24 +93,23 @@ struct memsegment *parse_memory_layout(char *intf_desc)
 
 	name = (char *)dfu_malloc(strlen(intf_desc));
 
-	ret = sscanf(intf_desc, "@%[^/]%n", name, strlen(intf_desc), &scanned);
+	ret = sscanf(intf_desc, "@%[^/]%n", name, /* strlen(intf_desc), */ &scanned);
 	if (ret < 1) {
 		free(name);
 //		warnx("Could not read name, sscanf returned %d", ret);
 		return NULL;
 	}
-	printf("DfuSe interface name: \"%s\"\n", name);
+	// printf("DfuSe interface name: \"%s\"\n", name);
 
 	intf_desc += scanned;
 	typestring = (char *)dfu_malloc(strlen(intf_desc));
 
-	while (ret = sscanf(intf_desc, "/0x%x/%n", &address, &scanned),
-	       ret > 0) {
+	while (0 < (ret = sscanf(intf_desc, "/0x%x/%n", &address, &scanned))) {
 
 		intf_desc += scanned;
-		while (ret = sscanf(intf_desc, "%d*%d%c%[^,/]%n",
-				    &sectors, &size, &multiplier, 1, typestring, strlen(intf_desc),
-				    &scanned), ret > 2) {
+		while (2 < (ret = sscanf(intf_desc, "%d*%d%c%[^,/]%n",
+				    &sectors, &size, &multiplier, /* 1, */ typestring, /* strlen(intf_desc), */
+				    &scanned))) {
 			intf_desc += scanned;
 
 			count++;
