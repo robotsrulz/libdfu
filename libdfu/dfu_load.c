@@ -85,7 +85,7 @@ int dfuload_do_dnload(struct dfu_if *dif, int xfer_size, struct dfu_file *file)
 				break;
 
 			/* Wait while device executes flashing */
-			if (dst.bwPollTimeout) nanosleep(&(struct timespec){0, dst.bwPollTimeout}, NULL);
+			if (dst.bwPollTimeout) nanosleep(&(struct timespec){0, dst.bwPollTimeout * 1000}, NULL);
 
 		} while (1);
 		if (dst.bStatus != DFU_STATUS_OK) {
@@ -120,7 +120,7 @@ get_status:
 //		dfu_state_to_string(dst.bState), dst.bStatus,
 //		dfu_status_to_string(dst.bStatus));
 
-	if (dst.bwPollTimeout) nanosleep(&(struct timespec){0, dst.bwPollTimeout}, NULL);
+	if (dst.bwPollTimeout) nanosleep(&(struct timespec){0, dst.bwPollTimeout * 1000}, NULL);
 
 	/* FIXME: deal correctly with ManifestationTolerant=0 / WillDetach bits */
 	switch (dst.bState) {

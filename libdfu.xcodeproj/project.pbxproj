@@ -298,6 +298,7 @@
 				HEADER_SEARCH_PATHS = "${SRCROOT}/../libusb/libusb/**";
 				INSTALL_PATH = "";
 				LD_DYLIB_INSTALL_NAME = "@rpath/libdfu-1.0.0.dylib";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "libdfu-1.0.0";
 				SKIP_INSTALL = YES;
 			};
@@ -315,6 +316,7 @@
 				HEADER_SEARCH_PATHS = "${SRCROOT}/../libusb/libusb/**";
 				INSTALL_PATH = "";
 				LD_DYLIB_INSTALL_NAME = "@rpath/libdfu-1.0.0.dylib";
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
 				PRODUCT_NAME = "libdfu-1.0.0";
 				SKIP_INSTALL = YES;
 			};

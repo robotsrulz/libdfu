@@ -349,6 +349,6 @@ int dfu_abort_to_idle(struct dfu_if *dif)
 //		errx(EX_IOERR, "Failed to enter idle state on abort");
 		exit(1);
 	}
-	if (dst.bwPollTimeout) nanosleep(&(struct timespec){0, dst.bwPollTimeout}, NULL);
+	if (dst.bwPollTimeout) nanosleep(&(struct timespec){0, dst.bwPollTimeout * 1000}, NULL);
     return ret;
 }

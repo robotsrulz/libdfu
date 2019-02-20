@@ -248,7 +248,7 @@ int dfuse_special_command(struct dfu_if *dif, unsigned int address,
 			}
 		}
 		/* wait while command is executed */
-		if (dst.bwPollTimeout) nanosleep(&(struct timespec){0, dst.bwPollTimeout}, NULL);
+		if (dst.bwPollTimeout) nanosleep(&(struct timespec){0, dst.bwPollTimeout * 1000}, NULL);
 		if (command == READ_UNPROTECT)
 			return ret;
 	} while (dst.bState == DFU_STATE_dfuDNBUSY);
@@ -282,7 +282,7 @@ int dfuse_dnload_chunk(struct dfu_if *dif, unsigned char *data, int size,
 //			errx(EX_IOERR, "Error during download get_status");
 			return ret;
 		}
-		if (dst.bwPollTimeout) nanosleep(&(struct timespec){0, dst.bwPollTimeout}, NULL);
+		if (dst.bwPollTimeout) nanosleep(&(struct timespec){0, dst.bwPollTimeout * 1000}, NULL);
 	} while (dst.bState != DFU_STATE_dfuDNLOAD_IDLE &&
 		 dst.bState != DFU_STATE_dfuERROR &&
 		 dst.bState != DFU_STATE_dfuMANIFEST &&
