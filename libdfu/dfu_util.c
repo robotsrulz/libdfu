@@ -31,8 +31,6 @@
 #include "libusb.h"
 #include "dfu.h"
 #include "usb_dfu.h"
-#include "dfu_file.h"
-#include "dfu_load.h"
 #include "dfu_util.h"
 #include "dfuse.h"
 
@@ -307,7 +305,7 @@ found_dfu:
 						continue;
 				}
 
-				pdfu = (struct dfu_if *)dfu_malloc(sizeof(*pdfu));
+				pdfu = (struct dfu_if *)malloc(sizeof(*pdfu));
 
 				memset(pdfu, 0, sizeof(*pdfu));
 
@@ -360,7 +358,7 @@ char *get_path(libusb_device *dev)
 	if (r > 0) {
 		sprintf(path_buf,"%d-%d",libusb_get_bus_number(dev),path[0]);
 		for (j = 1; j < r; j++){
-			sprintf(path_buf + strlen(path_buf), MAX_PATH_LEN, ".%d", path[j]);
+			snprintf(path_buf + strlen(path_buf), MAX_PATH_LEN, ".%d", path[j]);
 		};
 	}
 	return path_buf;

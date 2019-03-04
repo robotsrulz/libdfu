@@ -83,6 +83,11 @@ struct dfu_status {
     unsigned char iString;
 };
 
+struct dfu_file {
+    uint8_t *firmware;
+    size_t  size;
+};
+
 struct dfu_if {
     struct usb_dfu_func_descriptor func_dfu;
     uint16_t quirks;

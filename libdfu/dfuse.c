@@ -32,7 +32,6 @@
 
 #include "dfu.h"
 #include "usb_dfu.h"
-#include "dfu_file.h"
 #include "dfuse.h"
 #include "dfuse_mem.h"
 

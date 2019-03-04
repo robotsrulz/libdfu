@@ -24,14 +24,13 @@
 #include <string.h>
 #include <errno.h>
 
-#include "dfu_file.h"
 #include "dfuse_mem.h"
 
 int add_segment(struct memsegment **segment_list, struct memsegment segment)
 {
 	struct memsegment *new_element;
 
-	new_element = (struct memsegment *)dfu_malloc(sizeof(struct memsegment));
+	new_element = (struct memsegment *)malloc(sizeof(struct memsegment));
 	*new_element = segment;
 	new_element->next = NULL;
 
@@ -91,7 +90,7 @@ struct memsegment *parse_memory_layout(char *intf_desc)
 	struct memsegment *segment_list = NULL;
 	struct memsegment segment;
 
-	name = (char *)dfu_malloc(strlen(intf_desc));
+	name = (char *)malloc(strlen(intf_desc));
 
 	ret = sscanf(intf_desc, "@%[^/]%n", name, /* strlen(intf_desc), */ &scanned);
 	if (ret < 1) {
@@ -102,7 +101,7 @@ struct memsegment *parse_memory_layout(char *intf_desc)
 	// printf("DfuSe interface name: \"%s\"\n", name);
 
 	intf_desc += scanned;
-	typestring = (char *)dfu_malloc(strlen(intf_desc));
+	typestring = (char *)malloc(strlen(intf_desc));
 
 	while (0 < (ret = sscanf(intf_desc, "/0x%x/%n", &address, &scanned))) {
 

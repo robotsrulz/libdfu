@@ -7,34 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		CB2BEFA822130E330037EEAA /* dfu_load.h in Headers */ = {isa = PBXBuildFile; fileRef = CB2BEF9C22130E330037EEAA /* dfu_load.h */; };
 		CB2BEFA922130E330037EEAA /* dfu_util.c in Sources */ = {isa = PBXBuildFile; fileRef = CB2BEF9D22130E330037EEAA /* dfu_util.c */; };
 		CB2BEFAA22130E330037EEAA /* dfu_util.h in Headers */ = {isa = PBXBuildFile; fileRef = CB2BEF9E22130E330037EEAA /* dfu_util.h */; };
 		CB2BEFAB22130E330037EEAA /* dfuse_mem.h in Headers */ = {isa = PBXBuildFile; fileRef = CB2BEF9F22130E330037EEAA /* dfuse_mem.h */; };
 		CB2BEFAC22130E330037EEAA /* dfuse_mem.c in Sources */ = {isa = PBXBuildFile; fileRef = CB2BEFA022130E330037EEAA /* dfuse_mem.c */; };
 		CB2BEFAD22130E330037EEAA /* dfuse.h in Headers */ = {isa = PBXBuildFile; fileRef = CB2BEFA122130E330037EEAA /* dfuse.h */; };
 		CB2BEFAE22130E330037EEAA /* usb_dfu.h in Headers */ = {isa = PBXBuildFile; fileRef = CB2BEFA222130E330037EEAA /* usb_dfu.h */; };
-		CB2BEFAF22130E330037EEAA /* dfu_file.c in Sources */ = {isa = PBXBuildFile; fileRef = CB2BEFA322130E330037EEAA /* dfu_file.c */; };
-		CB2BEFB022130E330037EEAA /* dfu_file.h in Headers */ = {isa = PBXBuildFile; fileRef = CB2BEFA422130E330037EEAA /* dfu_file.h */; };
 		CB2BEFB122130E330037EEAA /* dfuse.c in Sources */ = {isa = PBXBuildFile; fileRef = CB2BEFA522130E330037EEAA /* dfuse.c */; };
-		CB2BEFB222130E330037EEAA /* dfu_load.c in Sources */ = {isa = PBXBuildFile; fileRef = CB2BEFA622130E330037EEAA /* dfu_load.c */; };
 		CB2BEFB322130E330037EEAA /* dfu.h in Headers */ = {isa = PBXBuildFile; fileRef = CB2BEFA722130E330037EEAA /* dfu.h */; };
 		CBF556732212F28000C28F03 /* libusb-1.0.0.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = CBF556722212F28000C28F03 /* libusb-1.0.0.dylib */; };
 		CBF556752212F44100C28F03 /* dfu.c in Sources */ = {isa = PBXBuildFile; fileRef = CBF556742212F44100C28F03 /* dfu.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		CB2BEF9C22130E330037EEAA /* dfu_load.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dfu_load.h; path = libdfu/dfu_load.h; sourceTree = "<group>"; };
 		CB2BEF9D22130E330037EEAA /* dfu_util.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dfu_util.c; path = libdfu/dfu_util.c; sourceTree = "<group>"; };
 		CB2BEF9E22130E330037EEAA /* dfu_util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dfu_util.h; path = libdfu/dfu_util.h; sourceTree = "<group>"; };
 		CB2BEF9F22130E330037EEAA /* dfuse_mem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dfuse_mem.h; path = libdfu/dfuse_mem.h; sourceTree = "<group>"; };
 		CB2BEFA022130E330037EEAA /* dfuse_mem.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dfuse_mem.c; path = libdfu/dfuse_mem.c; sourceTree = "<group>"; };
 		CB2BEFA122130E330037EEAA /* dfuse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dfuse.h; path = libdfu/dfuse.h; sourceTree = "<group>"; };
 		CB2BEFA222130E330037EEAA /* usb_dfu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = usb_dfu.h; path = libdfu/usb_dfu.h; sourceTree = "<group>"; };
-		CB2BEFA322130E330037EEAA /* dfu_file.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dfu_file.c; path = libdfu/dfu_file.c; sourceTree = "<group>"; };
-		CB2BEFA422130E330037EEAA /* dfu_file.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dfu_file.h; path = libdfu/dfu_file.h; sourceTree = "<group>"; };
 		CB2BEFA522130E330037EEAA /* dfuse.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dfuse.c; path = libdfu/dfuse.c; sourceTree = "<group>"; };
-		CB2BEFA622130E330037EEAA /* dfu_load.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; name = dfu_load.c; path = libdfu/dfu_load.c; sourceTree = "<group>"; };
 		CB2BEFA722130E330037EEAA /* dfu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dfu.h; path = libdfu/dfu.h; sourceTree = "<group>"; };
 		CBF556642212F27100C28F03 /* libdfu-1.0.0.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; includeInIndex = 0; path = "libdfu-1.0.0.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CBF556722212F28000C28F03 /* libusb-1.0.0.dylib */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.dylib"; path = "libusb-1.0.0.dylib"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -56,10 +48,6 @@
 		CBF5565B2212F27100C28F03 = {
 			isa = PBXGroup;
 			children = (
-				CB2BEFA322130E330037EEAA /* dfu_file.c */,
-				CB2BEFA422130E330037EEAA /* dfu_file.h */,
-				CB2BEFA622130E330037EEAA /* dfu_load.c */,
-				CB2BEF9C22130E330037EEAA /* dfu_load.h */,
 				CB2BEF9D22130E330037EEAA /* dfu_util.c */,
 				CB2BEF9E22130E330037EEAA /* dfu_util.h */,
 				CB2BEFA722130E330037EEAA /* dfu.h */,
@@ -97,13 +85,11 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB2BEFB022130E330037EEAA /* dfu_file.h in Headers */,
 				CB2BEFB322130E330037EEAA /* dfu.h in Headers */,
 				CB2BEFAD22130E330037EEAA /* dfuse.h in Headers */,
 				CB2BEFAE22130E330037EEAA /* usb_dfu.h in Headers */,
 				CB2BEFAA22130E330037EEAA /* dfu_util.h in Headers */,
 				CB2BEFAB22130E330037EEAA /* dfuse_mem.h in Headers */,
-				CB2BEFA822130E330037EEAA /* dfu_load.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,8 +150,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				CBF556752212F44100C28F03 /* dfu.c in Sources */,
-				CB2BEFB222130E330037EEAA /* dfu_load.c in Sources */,
-				CB2BEFAF22130E330037EEAA /* dfu_file.c in Sources */,
 				CB2BEFAC22130E330037EEAA /* dfuse_mem.c in Sources */,
 				CB2BEFA922130E330037EEAA /* dfu_util.c in Sources */,
 				CB2BEFB122130E330037EEAA /* dfuse.c in Sources */,
